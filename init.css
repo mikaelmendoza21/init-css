@@ -1,0 +1,64 @@
+/* Mikael A. Mendoza init-css */
+
+:root {
+    --background-color: #FFFFFF;
+    --alt-background-color:#1a1d29;
+    --font-color:#000000;
+    --accent-color:#0072be;
+    --alt-main-font-color:#ffffff;
+}
+
+/* Base Theme - Mobile-first */
+html{
+    color: var(--font-color);
+}
+
+body{
+    /* Layout */
+    margin: auto;
+    text-align: center;
+
+    /* Font */
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+div{
+    padding: 0.25%;
+}
+
+p{
+    border-bottom: 0.25rem var(--accent-color) solid ;
+    padding: 0.1rem;
+}
+
+/* Animated  Classes */
+.fadeIn{
+    /* Animations */
+    animation-duration: 1.7s;
+    animation-name: fadeIn;
+}
+.delayedFadeIn{
+    visibility: hidden;
+    /* Animations */
+    animation-delay: 1.5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.1;
+    }
+    75%{
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
