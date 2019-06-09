@@ -9,7 +9,31 @@
         <script>
             var modal;
             function showSampleModal(){
-                modal = new Modal({title: 'Hello', content: 'This is a modal!'});
+                modal = new Modal({
+                    // Modal Content
+                    title: 'Hello',
+                    content: 'This is a modal!', 
+
+                    // Styles classes (optional)
+                    modalContainerClasses: ['modal'],
+                    headerClasses : ['modal-header'],
+                    titleClasses: ['modal-title'],
+                    closeButtonClasses: ['button close-modal-btn'],
+                    closeButtonContainerClasses: ['modal-close'],
+                    contentClasses: ['modal-content'],
+
+                    // Callback Functions
+                    onOpenCallback: openModalCallback,
+                    onCloseCallback: closeModalCallback
+                });
+            }
+    
+            function openModalCallback(){
+                console.log('Modal open');
+            }
+
+            function closeModalCallback(){
+                console.log('Modal closed');
             }
         </script>
     </head>
