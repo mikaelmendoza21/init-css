@@ -1,8 +1,7 @@
-# init
-A simple starter web app theme using vanilla CSS and OO Javascript. 
+# init-css
+A simple starter pack of CSS styles and animations.
 Mobile-first.
-Made up of decoupled modules *init-CSS* (styling) and *init-js* (components) .
-
+Works well when paired with init-js components.
 
 ### Animated Classes
 **Fade In classes**
@@ -11,35 +10,22 @@ Made up of decoupled modules *init-CSS* (styling) and *init-js* (components) .
 
 * delayedFade
 
-### Javascript Components
 
-* **Modal**
+### Style Classes
 
-    A modal or "pop up" shown within the browser window.
+**Elements**
 
-    *Arguments*:  
-    
-    * title
-
-    * content
-
-    * modalContainerClasses
-
-    * headerClasses
-
-    * titleClasses
-
-    * closeButtonClasses
-
-    * closeButtonContainerClasses
-
-    * contentClasses
-
-    * onOpenCallback
-
-    * onCloseCallback
+* button
 
 
-    *Sample Initialization:*
+**Modals**
 
-    `let modal = new Modal({title: Hello, content: This is a modal.});`
+* modal (container)
+
+* modal-header
+
+* modal-title
+
+* modal-close
+
+* close-modal-btn
