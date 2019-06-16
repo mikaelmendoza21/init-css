@@ -18,17 +18,16 @@ body{
     text-align: center;
 
     /* Font */
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-family: sans-serif;
 }
 div{
-    padding: 1% 0.25% 1% 0.25%;
+    padding: 0.25% 1%;
     margin: 2rem;
 }
 
 p{
     padding: 0.1rem;
-    text-align: left;
 }
 
 /* REUSABLE CLASSES*/
@@ -64,7 +63,7 @@ p{
     border: 0.25rem solid var(--accent-color);
     border-radius: 0 0.7rem 0 0;
     width: 94%;
-    height: 94%;
+    max-height: 94%;
     animation-duration: 0.7s;
     animation-name: fadeIn;
 }
@@ -99,6 +98,7 @@ p{
     height: 100%;
     width: 100%;
     border-color: var(--accent-color);
+    margin-right: 0.25rem;
 }
 .modal-content{
     padding: 2rem 0.5rem 0.5rem 0.5rem;
@@ -122,6 +122,10 @@ p{
 /* Desktops - Large screens */
 @media (min-width: 768px) {
     body{
+        text-align: left;
+    }
+    p{
+        padding: 0.5rem;
         text-align: left;
     }
     .section{
