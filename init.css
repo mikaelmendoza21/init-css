@@ -21,13 +21,9 @@ body{
     font-size: 1.5rem;
     font-family: sans-serif;
 }
-div{
-    padding: 0.25% 1%;
-    margin: 2rem;
-}
 
-p{
-    padding: 0.1rem;
+div{
+    margin: 0.5rem 0 0 0;
 }
 
 /* REUSABLE CLASSES*/
@@ -47,6 +43,15 @@ p{
     max-width: 98vw;
     margin: 0;
     padding: 1rem 0.5rem;
+}
+
+.section-title{
+    text-align: left;
+    padding-left: 1rem !important;
+}
+
+.section > * {
+    padding-left: 1.3rem;
 }
 
 /* Modal */
@@ -124,23 +129,38 @@ p{
     animation-name: fadeIn;
 }
 
-/* Desktops - Large screens */
+/* Medium-Large screens */
 @media (min-width: 768px) {
     body{
         text-align: left;
     }
-    p{
-        padding: 0.5rem;
-        text-align: left;
-    }
     .section{
-        padding: 1.5rem 5rem 1.5rem 4rem;
+        padding: 1.5rem 7rem 1rem 5rem;
     }
-    .section span, .section p{
-        padding: 0 1rem 0 0;
+    .section-title{
+        padding-left: 1rem !important;
+    }
+    .section > * {
+        padding-left: 2rem;
     }
 }
 
+
+/* Desktops - Large screens */
+@media (min-width: 1024px) {
+    body{
+        text-align: left;
+    }
+    .section{
+        padding: 1.5rem 10rem 1rem 7rem;
+    }
+    .section-title{
+        padding-left: 1rem !important;
+    }
+    .section > * {
+        padding-left: 2.5rem;
+    }
+}
 
 /* Animations */
 @keyframes fadeIn {
