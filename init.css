@@ -18,7 +18,7 @@ body{
     text-align: center;
 
     /* Font */
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: sans-serif;
 }
 
@@ -47,11 +47,16 @@ div{
 
 .section-title{
     text-align: left;
-    padding-left: 1rem !important;
+    padding-left: 0.5rem !important;
 }
 
 .section > * {
-    padding-left: 1.3rem;
+    padding-left: 0.75rem;
+}
+
+.section-content{
+    margin: 0;
+    padding-left: 5%;
 }
 
 /* Modal */
@@ -135,7 +140,7 @@ div{
         text-align: left;
     }
     .section{
-        padding: 1.5rem 7rem 1rem 5rem;
+        padding: 1rem 5rem 0 5rem;
     }
     .section-title{
         padding-left: 1rem !important;
@@ -152,7 +157,7 @@ div{
         text-align: left;
     }
     .section{
-        padding: 1.5rem 10rem 1rem 7rem;
+        padding: 1.25rem 7rem 0 7rem;
     }
     .section-title{
         padding-left: 1rem !important;
