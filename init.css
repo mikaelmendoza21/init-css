@@ -5,6 +5,8 @@
     --font-color:#000000;
     --accent-color:#0072be;
     --alt-font-color:#ffffff;
+    --menu-color: #0072be;
+    --menu-font-color: #ffffff;
 }
 
 /* Base Theme - Mobile-first */
@@ -35,6 +37,51 @@ div{
     padding: 0.5rem;
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+/* Menu */
+.menu{
+    background-color: var(--menu-color);
+    color: var(--menu-font-color);
+    height: 7vh;
+    width: 90vw;
+    margin: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    text-align: center;
+}
+.menu-toggle{
+    background-color: var(--menu-color);
+    color: var(--menu-font-color);
+    font-size: 6vh;
+    text-align: center;
+    height: 7vh;
+    width: 10vw;
+    margin: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    right:0;
+}
+.menu-toggle:before{
+    content: "=";
+    text-align: center;
+}
+.menu-hover{
+    text-align: left;
+}
+.menu-toggle:hover, .menu-item:hover, .menu-home:hover{
+    cursor: pointer; 
+    text-decoration: underline;
+}
+.menu-item{
+    visibility: hidden;
+    text-align: center;
+}
+.menu-item.expanded{
+    visibility: visible;
 }
 
 /* Section */
@@ -112,6 +159,7 @@ div{
 }
 .modal-content{
     padding: 2rem 0.5rem 0.5rem 0.5rem;
+    overflow: auto;
 }
 
 /* Animated  Classes */
@@ -139,6 +187,9 @@ div{
     body{
         text-align: left;
     }
+    .menu-item{
+        visibility: visible;
+    }
     .section{
         padding: 1rem 5rem 0 5rem;
     }
@@ -164,6 +215,23 @@ div{
     }
     .section > * {
         padding-left: 2.5rem;
+    }
+    .menu{
+        width: 100vw;
+    }
+    .menu-home{
+        float: left;
+        display: inline-flex;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    .menu-toggle{
+        visibility: hidden;
+    }
+    .menu-item{
+        visibility: visible;
+        display: inline-flex;
+        margin-right: 5vw;
     }
 }
 
