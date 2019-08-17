@@ -123,6 +123,8 @@ div{
     max-height: 94%;
     animation-duration: 0.7s;
     animation-name: fadeIn;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .modal-header{
     height:10%;
@@ -159,7 +161,6 @@ div{
 }
 .modal-content{
     padding: 2rem 0.5rem 0.5rem 0.5rem;
-    overflow: auto;
 }
 
 /* Animated  Classes */
