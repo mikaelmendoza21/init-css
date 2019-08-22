@@ -17,6 +17,7 @@ html{
 body{
     /* Layout */
     margin: auto;
+    margin-top: 7vh; /* Menu height */
     text-align: center;
 
     /* Font */
@@ -43,45 +44,72 @@ div{
 .menu{
     background-color: var(--menu-color);
     color: var(--menu-font-color);
-    height: 7vh;
+    max-height: 7vh;
     width: 90vw;
-    margin: 0;
+    margin: auto;
+    padding-top: 0.5rem;
     display: block;
     position: fixed;
     top: 0;
     z-index: 100;
     text-align: center;
+    margin-bottom: 0.5rem;
 }
 .menu-toggle{
     background-color: var(--menu-color);
     color: var(--menu-font-color);
-    font-size: 6vh;
+    font-size: 5vh;
     text-align: center;
-    height: 7vh;
     width: 10vw;
     margin: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.4rem;
+    z-index: 100;
     display: block;
     position: fixed;
     top: 0;
     right:0;
+
+    border: none;
+    border-left: 0.1rem solid var(--menu-font-color);
 }
 .menu-toggle:before{
-    content: "=";
+    content: "v";
     text-align: center;
 }
-.menu-hover{
+.menu-toggle.expanded:before{
+    content: "^";
+    text-align: center;
+}
+.menu-home{
     text-align: left;
+    text-align: center;
+}
+.menu-toggle, .menu-item, .menu-home{
+    text-decoration: none;
 }
 .menu-toggle:hover, .menu-item:hover, .menu-home:hover{
     cursor: pointer; 
     text-decoration: underline;
 }
+.menu-home{
+    display: block;
+    background-color: var(--menu-color);
+    color: var(--menu-font-color);
+}
 .menu-item{
+    display: block;
+    background-color: var(--menu-color);
+    color: var(--menu-font-color);
     visibility: hidden;
     text-align: center;
 }
 .menu-item.expanded{
     visibility: visible;
+    background-color: var(--menu-color);
+    border-bottom: 0.1rem solid var(--menu-font-color);
+    margin-top: 0;
+    padding-top: 0.5rem;
 }
 
 /* Section */
@@ -116,11 +144,14 @@ div{
     left: 0;
     right: 0;
     z-index: 10;
+
+    width: 94%;
+    max-height: 94%;
+
     background: var(--background-color);
     border: 0.25rem solid var(--accent-color);
     border-radius: 0 0.7rem 0 0;
-    width: 94%;
-    max-height: 94%;
+
     animation-duration: 0.7s;
     animation-name: fadeIn;
     overflow-x: hidden;
@@ -188,8 +219,26 @@ div{
     body{
         text-align: left;
     }
-    .menu-item{
+    .menu{
+        width: 100vw;
+    }
+    .menu-toggle{
+        visibility: hidden;
+        display: inline-flex;
+    }
+    .menu-home, .menu-home.expanded{
+        float: left;
+        display: inline-flex;
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+        border: none;
+    }
+    .menu-item, .menu-item.expanded{
         visibility: visible;
+        display: inline-flex;
+        margin:0;
+        padding: 0.25rem;
+        border: none;
     }
     .section{
         padding: 1rem 5rem 0 5rem;
@@ -220,19 +269,24 @@ div{
     .menu{
         width: 100vw;
     }
-    .menu-home{
+    .menu-home, .menu-home.expanded{
         float: left;
         display: inline-flex;
         margin-left: 5vw;
         margin-right: 5vw;
+        border: none;
     }
     .menu-toggle{
         visibility: hidden;
+        display: inline-flex;
     }
-    .menu-item{
+    .menu-item, .menu-item.expanded{
         visibility: visible;
         display: inline-flex;
+        margin:0;
         margin-right: 5vw;
+        padding: 0.25rem;
+        border: none;
     }
 }
 
